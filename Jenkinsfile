@@ -25,7 +25,7 @@ pipeline{
 
                      sh "service httpd start"
                      sh " chmod -R 777 /var/www/html "
-                     sh ""
+                     sh "cp index.html /var/www/html "
                   
                 }
               }
