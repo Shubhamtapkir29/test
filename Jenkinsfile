@@ -13,7 +13,7 @@ pipeline{
 
      stages {
 
-              stage ( " installing httpd" ) {
+              stage ( "one" ) {
 
                 steps {
 
@@ -21,12 +21,14 @@ pipeline{
                   
                 }
 
-                stage ("start httpd") {
+                stage ("two") {
+
+                  steps {
 
                      sh "service httpd start"
                      sh " chmod -R 777 /var/www/html "
                      sh "cp index.html /var/www/html "
-                  
+                  }
                 }
               }
 
