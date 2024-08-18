@@ -14,8 +14,7 @@ pipeline{
              steps {
                      sh "service httpd start"
                      sh " chmod -R 777 /var/www/html "
-                     sh "sudo cp -r /mnt/slave-1/workspace/httpd-git-deploy
-/index.html /var/www/html "
+                     sh "sudo cp -r /mnt/slave-1/workspace/httpd-git-deploy/index.html /var/www/html "
                   }
                 }
               }
