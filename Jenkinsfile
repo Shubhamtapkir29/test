@@ -20,6 +20,7 @@ pipeline{
                         sh "sudo yum install httpd -y "
                   
                 }
+              }
 
                 stage ("two") {
 
@@ -27,7 +28,7 @@ pipeline{
 
                      sh "service httpd start"
                      sh " chmod -R 777 /var/www/html "
-                     sh "cp index.html /var/www/html "
+                     sh "sudo cp -r index.html /var/www/html "
                   }
                 }
               }
